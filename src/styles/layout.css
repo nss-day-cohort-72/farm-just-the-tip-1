@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(246, 253, 203);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.plant {
+  /* border: solid green; */
+  font-size: 2.5rem;
+  margin: 1.5rem;
+  width: 250px;
+}
