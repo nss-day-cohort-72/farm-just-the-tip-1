@@ -1,7 +1,7 @@
 export const createSoybean = () => {
-    return {
-        type: 'Soy Bean',
-        height: 20,
-        output: 4
-    }
-}
+  return {
+    type: 'Soybean',
+    height: 20,
+    output: 4,
+  };
+};
