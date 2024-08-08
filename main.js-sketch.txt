@@ -1,0 +1,24 @@
+Main.js 
+import {createPlan} from plan.js
+import {plantSeeds} from tractor.js
+import {usePlants} from field.js
+import {harvestPlants} from harvester.js
+import {Catalog} from catalog.js
+
+
+-Will have yearlyplan variable with value set to createPlan()
+
+
+- invoke plantSeeds(yearlyplan)?
+
+console.log() usePlants to see if seeds were added?
+
+store usePlants in variable
+
+
+harvestPlants(usePlants)
+
+
+target the DOM element 
+eg. const mainElement
+    mainElement.innerHTML = Catalog

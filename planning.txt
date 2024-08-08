@@ -1,0 +1,60 @@
+plan.js module
+ -responsible for defining 3 rows of crops to be planted
+- Each row contains 6 plots of land
+- Each plot is randomly assigned one of 6 types of foods
+- Corn, Asparagus, Potato, Wheat, Sunflower, & Soybean
+
+
+seed producing module
+- create a module for each type of possible plan in "seeds" directory
+-Each module will export a function creating a seed ex(createAsparagus) etc.
+-These funcitons will return an object with properties of type, height, 
+-Corn will return an array with 2 identical objects in it
+-Test create seeds functions in main.js using console.logs
+
+field.js module
+-Define a variable whose value is an empty array. This array will store all
+plants that are growing in field (Do not export variable)
+- Create and export function called addPlant
+- addPlant will accept seed object as input
+- addPlant will add each object to the array 
+-Corn may be an issue since it's an array of objects
+-Create and export a function named usePlants that returns copy of array of plants
+Test code in main.js
+
+
+tractor.js module
+-define and export plantSeeds function
+- This function will take the year's planting plan as input (parameter)
+-The plan is an array with 3 arrays in it representing the 3 rows in the field
+to be planted
+- Iterate through both parent and child arrays
+- Each iteration in the row of food types ivoke the correct function
+e.g if food type is 'Asparagus' invoke createAsparagus function to get a seed
+- Add that seed to array of plants in field module
+-Test logic in main.js
+
+harvester.js module
+-create and export a function called harvestPlants
+-harvestPlants acceps the plants array as input
+- This function will return an array of seed objects
+- Iterate array of growing plants and grab the value of the output property
+- Based on the output value, add that many plant objects to array that harvestPlants
+returns
+- Corn will be an exception as half will be sold to cattle ranchers so only half
+of corn's output wil be added to array that harvestPlants returns
+- Test logic in main.js
+
+Selling the harvest (Displaying to the DOM)
+-Use flexbox to make a grid layout
+- Create <main> element in index.html with a class of container
+- create  catalalog.js module
+create and export a Catalog funciton
+-This funciton should accept harvested food aray as parameter
+- Catalalog function should iterate the array of food objects
+- Each iteration should create HTML string using section element
+ to append later to main element
+-Test logic on main.js
+-Run tests to make sure all have passed
+
+

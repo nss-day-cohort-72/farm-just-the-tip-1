@@ -17,6 +17,6 @@
     "babel-jest": "^25.3.0",
     "jest": "^25.3.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "type": "module"
 }
-
