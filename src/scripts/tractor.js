@@ -1,3 +1,4 @@
+
 import { createSoybean } from './seeds/soybean.js';
 import { createPotato } from './seeds/potato.js';
 import { createAsparagus } from './seeds/asparagus.js';
@@ -25,3 +26,4 @@ export const plantSeeds = (plan) => {
     }
   }
 };
+
