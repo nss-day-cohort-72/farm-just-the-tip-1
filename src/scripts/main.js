@@ -14,3 +14,6 @@ const plantsArr = usePlants();
 export const harvestedPlants = harvestPlants(plantsArr);
 
 Catalog(harvestedPlants);
+
+
+console.log(plantsArr);
