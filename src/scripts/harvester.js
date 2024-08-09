@@ -1,5 +1,3 @@
-
-
 export const harvestPlants = (arr) => {
   const harvestedPlants = [];
   for (const plant of arr) {

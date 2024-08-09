@@ -2,13 +2,13 @@ export const Catalog = (harvestedPlants) => {
   let html = '';
   const plantTypeArr = [];
   for (const plant of harvestedPlants) {
-    plantTypeArr.push(plant.src);
+    plantTypeArr.push(plant.type);
   }
 
   const sortedPlantTypes = plantTypeArr.sort();
   for (const plant of sortedPlantTypes) {
     html += `
-         <img src="${plant}" class="plant">
+         <section class="plant">${plant}</section>
          `;
   }
   return html;

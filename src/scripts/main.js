@@ -12,21 +12,17 @@ const yearlyPlan = createPlan();
 plantSeeds(yearlyPlan);
 //Plants array
 const plantsArr = usePlants();
-
 //Harvesting plants
-export const harvestedPlants = harvestPlants(plantsArr);
+const harvestedPlants = harvestPlants(plantsArr);
+const quantityContainer = document.querySelector('.quantity-container');
+const mainElement = document.querySelector('.container');
 
 const htmlCatalog = Catalog(harvestedPlants);
 const htmlCatalogIcons = catalogIcons(harvestedPlants)
+const htmlCatalogTable = displayTable(harvestedPlants);
 
-const mainElement = document.querySelector('.container');
-// mainElement.innerHTML = htmlCatalog;
+mainElement.innerHTML = htmlCatalog;
 mainElement.innerHTML = htmlCatalogIcons;
-
-const tableHtml = displayTable(harvestedPlants);
-
-const quantityContainer = document.querySelector('.quantity-container');
-console.log(harvestedPlants)
+quantityContainer.innerHTML = htmlCatalogTable;
 
 
-// quantityContainer.innerHTML = tableHtml;
