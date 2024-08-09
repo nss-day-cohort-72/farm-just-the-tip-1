@@ -14,6 +14,13 @@ body {
   margin: 1.5rem;
   width: 250px;
 }
+.plant-icon {
+  /* border: solid green; */
+  font-size: 2.5rem;
+  margin: 1.5rem;
+  width: 100px;
+  height: 100px;
+}
 
 .table-wrapper {
   border: solid black;

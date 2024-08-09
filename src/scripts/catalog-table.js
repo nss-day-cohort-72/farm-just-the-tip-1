@@ -24,38 +24,53 @@ export const displayTable = (objArr) => {
   const asparagusTotal = objArr.filter((plant) => plant.type === 'Asparagus');
   const potatoTotal = objArr.filter((plant) => plant.type === 'Potato');
 
-  addingProp(wheatTotal, tableObject);
-  addingProp(sunflowerTotal, tableObject);
-  addingProp(soyBeanTotal, tableObject);
-  addingProp(potatoTotal, tableObject);
-  addingProp(cornTotal, tableObject);
-  addingProp(asparagusTotal, tableObject);
+  const cornObject = {
+    name: "Corn",
+    quantity: cornTotal.length
+  }
+  const wheatObject = {
+    name: "Wheat",
+    quantity: wheatTotal.length
+  }
+  const sunflowerObject = {
+    name: "Sunflower",
+    quantity: sunflowerTotal.length
+  }
+  const soyBeanObject = {
+    name: "Soybean",
+    quantity: soyBeanTotal.length
+  }
+  const asparagusObject = {
+    name: "Aparagus",
+    quantity: asparagusTotal.length
+  }
+  const potatoObject = {
+    name: "Potato",
+    quantity: potatoTotal.length
+  }
+
+
+  // addingProp(wheatTotal, tableObject);
+  // addingProp(sunflowerTotal, tableObject);
+  // addingProp(soyBeanTotal, tableObject);
+  // addingProp(potatoTotal, tableObject);
+  // addingProp(cornTotal, tableObject);
+  // addingProp(asparagusTotal, tableObject);
 
   let html = `
-    <div class="quantity-container">
         <h2>Quantity</h2>
-        <div class="card">${tableObject.corn.quantity}</div>
-        <div class="card">${tableObject.wheat.quantity}</div>
-        <div class="card">${tableObject.sunflower.quantity}</div> 
-        <div class="card">${tableObject.asparagus.quantity}</div> 
-        <div class="card">${tableObject.soybean.quantity}</div> 
-        <div class="card">${tableObject.potato.quantity}</div>  
-        
-           
- 
+        <div class="card">${cornObject.quantity}</div>
+        <div class="card">${wheatObject.quantity}</div>
+        <div class="card">${sunflowerObject.quantity}</div> 
+        <div class="card">${asparagusObject.quantity}</div> 
+        <div class="card">${soyBeanObject.quantity}</div> 
+        <div class="card">${potatoObject.quantity}</div>  
       `;
-
-  console.log(tableObject);
-  console.log(plantNames.filter(plant => {
-      
-  }));
-
   return html;
 };
 
 //Helper function//
-const addingProp = (arr, obj) => {
-  const quantity = arr.length;
+const addingProp = (obj) => {
 
   if (quantity > 0) {
     const type = arr[0].type.toLowerCase();
