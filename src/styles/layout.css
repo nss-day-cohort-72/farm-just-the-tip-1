@@ -14,3 +14,40 @@ body {
   margin: 1.5rem;
   width: 250px;
 }
+
+.table-wrapper {
+  border: solid black;
+  width: 250px;
+}
+
+.header-container {
+  border: solid brown;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.content-container {
+  border: dotted red;
+  display: flex;
+}
+
+.plant-container,
+.quantity-container {
+  border: solid gray;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 100px;
+}
+
+.plant-container h2,
+.quantity-container h2 {
+  /* max-width: 100px; */
+  border: solid black;
+  margin: 0;
+}
+
+.card {
+  border: solid black;
+  flex-grow: 1;
+}

@@ -1,12 +1,17 @@
 import { harvestedPlants } from './main.js';
 
 export const Catalog = (harvestedPlants) => {
-  const mainElement = document.querySelector('.container');
   let html = '';
+  const plantTypeArr = [];
   for (const plant of harvestedPlants) {
+    plantTypeArr.push(plant.type);
+  }
+
+  const sortedPlantTypes = plantTypeArr.sort();
+  for (const plant of sortedPlantTypes) {
     html += `
-         <section class="plant">${plant.type}</section>
+         <section class="plant">${plant}</section>
          `;
   }
-  mainElement.innerHTML = html;
+  return html;
 };
